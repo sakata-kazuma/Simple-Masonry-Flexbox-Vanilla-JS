@@ -1,5 +1,5 @@
 # Simple Masonry Flexbox & Vanilla JS
-FlexboxとVanilla JSで実装した簡易Masonryレイアウトのサンプルです。
+FlexboxとVanilla JSで実装した簡易Masonryレイアウトのサンプルです。  
 ※ランダム配置なし。横の並び順は維持されます。
 
 
