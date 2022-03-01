@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* Simple Masonry Flexbox & Vanilla JS ベース設定 */
+.js-masonry-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+@media only screen and (min-width: 1025px) {
+  .js-masonry-list {
+    column-gap: 2.5%;
+  }
+  .js-masonry-elm {
+    width: 18%;
+    margin-bottom: 2.5%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .js-masonry-list {
+    column-gap: 1.25%;
+  }
+  .js-masonry-elm {
+    width: 32.5%;
+    margin-bottom: 1.25%;
+  }
+}
+@media only screen and (min-width: 451px) and (max-width: 600px) {
+  .js-masonry-list {
+    column-gap: 2%;
+  }
+  .js-masonry-elm {
+    width: 49%;
+    margin-bottom: 2%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .js-masonry-elm {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

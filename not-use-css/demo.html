@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Masonry Flexbox & Vanilla JS (not use css)</title>
+  <link rel="stylesheet" href="simple-masonry.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 100px 0;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 10vh;
+    }
+    h2 {
+      margin: 0 0 40px;
+      text-align: center;
+    }
+    h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    .lead {
+      margin: 0 0 40px;
+      text-align: center;
+      font-size: 18px;
+    }
+    img {
+      height: auto;
+      width: 100%;
+      vertical-align: top;
+    }
+    .test-list {
+      max-width: 1200px;
+      margin: 0 auto 100px;
+      padding: 0 50px;
+      list-style: none;
+    }
+    .test-list02 .js-masonry-elm {
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    .js-masonry-elm {
+      background-color: #f7f7f7;
+      font-size: 14px;
+    }
+    .test-list-sub {
+      padding-left: 1em;
+    }
+    .test-list-sub li + li {
+      margin-top: 10px;
+    }
+    @media only screen and (max-width: 600px) {
+      .test-list {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Simple Masonry Flexbox & Vanilla JS (not use css)</h1>
+  <h2>※横の並び順は維持されます。</h2>
+  <ul class="js-masonry-list test-list">
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/103/400/300" alt="" width="400" height="300">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/1003/300/400" alt="" width="300" height="400">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/90/300/200" alt="" width="300" height="200">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/100/300/150" alt="" width="300" height="150">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/61/300/280" alt="" width="300" height="280">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/23/300/400" alt="" width="300" height="400">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/13/400/300" alt="" width="400" height="300">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/43/300/380" alt="" width="300" height="380">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/54/300/280" alt="" width="300" height="280">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/76/300/150" alt="" width="300" height="150">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/56/400/300" alt="" width="400" height="300">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/783/300/300" alt="" width="300" height="300">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/72/300/200" alt="" width="300" height="200">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/161/300/150" alt="" width="300" height="150">
+    </li>
+    <li class="js-masonry-elm">
+      <img src="https://picsum.photos/id/829/300/280" alt="" width="300" height="280">
+    </li>
+  </ul>
+
+  <h2>テキストリスト</h2>
+  <ul class="js-masonry-list test-list-text">
+    <li class="js-masonry-elm">
+      <h3>リスト1</h3>
+      <ul class="test-list-sub">
+        <li><a href="">リンク1</a></li>
+        <li><a href="">リンク2</a></li>
+        <li><a href="">リンク3</a></li>
+      </ul>
+    </li>
+    <li class="js-masonry-elm">
+      <h3>リスト2</h3>
+      <ul class="test-list-sub">
+        <li><a href="">リンク1</a></li>
+        <li><a href="">リンク2</a></li>
+        <li><a href="">リンク3</a></li>
+        <li><a href="">リンク4</a></li>
+      </ul>
+    </li>
+    <li class="js-masonry-elm">
+      <h3>リスト3</h3>
+      <ul class="test-list-sub">
+        <li><a href="">リンク1</a></li>
+        <li><a href="">リンク2</a></li>
+        <li><a href="">リンク3</a></li>
+        <li><a href="">リンク4</a></li>
+      </ul>
+    </li>
+    <li class="js-masonry-elm">
+      <h3>リスト4</h3>
+      <ul class="test-list-sub">
+        <li><a href="">リンク1</a></li>
+        <li><a href="">リンク2</a></li>
+        <li><a href="">リンク3</a></li>
+        <li><a href="">リンク4</a></li>
+        <li><a href="">リンク5</a></li>
+        <li><a href="">リンク6</a></li>
+      </ul>
+    </li>
+    <li class="js-masonry-elm">
+      <h3>リスト5</h3>
+      <ul class="test-list-sub">
+        <li><a href="">リンク1</a></li>
+        <li><a href="">リンク2</a></li>
+        <li><a href="">リンク3</a></li>
+        <li><a href="">リンク4</a></li>
+      </ul>
+    </li>
+    <li class="js-masonry-elm">
+      <h3>リスト6</h3>
+      <ul class="test-list-sub">
+        <li><a href="">リンク1</a></li>
+        <li><a href="">リンク2</a></li>
+        <li><a href="">リンク3</a></li>
+        <li><a href="">リンク4</a></li>
+        <li><a href="">リンク5</a></li>
+        <li><a href="">リンク6</a></li>
+      </ul>
+    </li>
+    <li class="js-masonry-elm">
+      <h3>リスト7</h3>
+      <ul class="test-list-sub">
+        <li><a href="">リンク1</a></li>
+        <li><a href="">リンク2</a></li>
+      </ul>
+    </li>
+    <li class="js-masonry-elm">
+      <h3>リスト8</h3>
+      <ul class="test-list-sub">
+        <li><a href="">リンク1</a></li>
+        <li><a href="">リンク2</a></li>
+        <li><a href="">リンク3</a></li>
+        <li><a href="">リンク4</a></li>
+      </ul>
+    </li>
+    <li class="js-masonry-elm">
+      <h3>リスト9</h3>
+      <ul class="test-list-sub">
+        <li><a href="">リンク1</a></li>
+      </ul>
+    </li>
+    <li class="js-masonry-elm">
+      <h3>リスト10</h3>
+      <ul class="test-list-sub">
+        <li><a href="">リンク1</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <script src="simple-masonry.js"></script>
+  <script>
+    masonry({
+      target: '.js-masonry-list',  //対象リスト
+      column: 5,  //カラム数
+      columnGap: 50,  //対象リスト内要素横の余白
+      rowGap: 50,  //対象リスト内要素の下余白
+      responsive: [  //レスポンシブ設定
+        {
+          breakpoint: 1024, //ブレイクポイント
+          column: 4,
+          columnGap: 40,
+          rowGap: 40,
+        },
+        {
+          breakpoint: 800,
+          column: 3,
+          columnGap: 30,
+          rowGap: 30,
+        },
+        {
+          breakpoint: 600,
+          column: 2,
+          columnGap: 20,
+          rowGap: 20,
+        },
+        {
+          breakpoint: 400,
+          column: 1,
+          columnGap: 0,
+          rowGap: 40,
+        }
+      ]
+    });
+  </script>
+</body>
+</html>
