@@ -40,7 +40,7 @@ function masonry(setOptions) {
 	const defaultOptions = {
 		target: '.js-masonry-list',  //対象リスト
 		column: 1,  //カラム数
-		columnGap: 0,  //number：対象リスト内要素横の余白（相対値（%）に置き換えられます）
+		columnGap: 0,  //number：対象リスト内要素の横余白（相対値（%）に置き換えられます）
 		rowGap: 0,  //number or string：対象リスト内要素の下余白（相対値（%）に置き換えられます。※置き換えたくない場合は、'20%'など単位を入れてください。）
 		responsive: null,
 		/*
