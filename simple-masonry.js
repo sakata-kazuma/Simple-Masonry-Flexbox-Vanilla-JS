@@ -78,8 +78,11 @@ function masonry(setOptions) {
 			if(!listElms) {
 				return false;
 			}
-			//active class設定
-			list.classList.add(options.activeClass);
+			//初期設定
+			if(!list.classList.contains(options.activeClass)) {
+				//active class設定
+				list.classList.add(options.activeClass);
+			}
 
 			//要素の位置
 			listElms.forEach(function(listElm,index){
