@@ -31,7 +31,7 @@ function masonry(setOptions) {
 	//対象リスト取得
 	const lists = Array.prototype.slice.call(document.querySelectorAll(listClass),0);
 	//表示エリアが存在するかチェック
-	if(!lists) {
+	if(lists.length === 0) {
 		return false;
 	}
 
@@ -75,7 +75,7 @@ function masonry(setOptions) {
 			//対象リスト内要素取得
 			const listElms = Array.prototype.slice.call(list.querySelectorAll(listElmsClass),0);
 			//対象リスト内要が存在するかチェック
-			if(!listElms) {
+			if(listElms.length === 0) {
 				return false;
 			}
 			//初期設定
