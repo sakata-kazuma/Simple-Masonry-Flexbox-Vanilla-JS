@@ -15,7 +15,7 @@ FlexboxとVanilla JSで実装した簡易Masonryレイアウトのサンプル�
 
 
 #### デモ
-https://codepen.io/sakata-kazuma/pen/ZEamWNM
+[codepen](https://codepen.io/web_walking_nak/pen/mdjdVpL)
 
 　  
 
